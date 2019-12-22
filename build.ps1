@@ -1,5 +1,5 @@
 ﻿#Remove-Item –path ./ –recurse
-& java -jar swagger-codegen-cli.jar generate -i https://api.cloudmersive.com/swagger/api/nlp -l php -c packageconfig.json
+& java -jar swagger-codegen-cli.jar generate -i https://api.cloudmersive.com/swagger/api/nlpv2 -l php -c packageconfig.json
 #(Get-Content ./client/package.json).replace('v1', '1.0.1') | Set-Content ./client/package.json
 Copy-Item ./cloudmersive_nlp_api_client/* -Destination . -Recurse -Force
 Remove-Item –path ./cloudmersive_nlp_api_client –recurse
@@ -14,4 +14,4 @@ Remove-Item –path ./cloudmersive_nlp_api_client –recurse
 (Get-Content ./composer.json).replace('https://github.com/swagger-api/swagger-codegen', 'https://cloudmersive.com') | Set-Content ./composer.json
 (Get-Content ./composer.json).replace('http://swagger.io', 'https://cloudmersive.com') | Set-Content ./composer.json
 
-& php C:\ProgramData\ComposerSetup\bin\composer.phar install
+& C:\tools\php71\php C:\ProgramData\ComposerSetup\bin\composer.phar install

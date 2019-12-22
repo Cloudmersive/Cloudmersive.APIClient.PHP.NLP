@@ -1,74 +1,15 @@
-# Swagger\Client\SpellCheckApi
+# Swagger\Client\SpellcheckApi
 
 All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**spellCheckCheckJson**](SpellCheckApi.md#spellCheckCheckJson) | **POST** /nlp/spellcheck/check/word/json | Spell check word
-[**spellCheckCheckSentenceJson**](SpellCheckApi.md#spellCheckCheckSentenceJson) | **POST** /nlp/spellcheck/check/sentence/json | Check if sentence is spelled correctly
-[**spellCheckCheckSentenceString**](SpellCheckApi.md#spellCheckCheckSentenceString) | **POST** /nlp/spellcheck/check/sentence/string | Spell check a sentence
-[**spellCheckCorrect**](SpellCheckApi.md#spellCheckCorrect) | **POST** /nlp/spellcheck/correct/word/string | Find spelling corrections
-[**spellCheckCorrectJson**](SpellCheckApi.md#spellCheckCorrectJson) | **POST** /nlp/spellcheck/correct/word/json | Find spelling corrections
-[**spellCheckPost**](SpellCheckApi.md#spellCheckPost) | **POST** /nlp/spellcheck/check/word/string | Spell check a word
+[**spellcheckCheckSentence**](SpellcheckApi.md#spellcheckCheckSentence) | **POST** /nlp-v2/spellcheck/check/sentence | Check if sentence is spelled correctly
+[**spellcheckCorrectJson**](SpellcheckApi.md#spellcheckCorrectJson) | **POST** /nlp-v2/spellcheck/check/word | Find spelling corrections
 
 
-# **spellCheckCheckJson**
-> \Swagger\Client\Model\CheckJsonResponse spellCheckCheckJson($value)
-
-Spell check word
-
-Spell check a word as JSON
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: Apikey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Apikey', 'Bearer');
-
-$apiInstance = new Swagger\Client\Api\SpellCheckApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$value = "value_example"; // string | Input sentence
-
-try {
-    $result = $apiInstance->spellCheckCheckJson($value);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SpellCheckApi->spellCheckCheckJson: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **string**| Input sentence |
-
-### Return type
-
-[**\Swagger\Client\Model\CheckJsonResponse**](../Model/CheckJsonResponse.md)
-
-### Authorization
-
-[Apikey](../../README.md#Apikey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **spellCheckCheckSentenceJson**
-> \Swagger\Client\Model\CheckSentenceJsonResponse spellCheckCheckSentenceJson($value)
+# **spellcheckCheckSentence**
+> \Swagger\Client\Model\CheckSentenceResponse spellcheckCheckSentence($value)
 
 Check if sentence is spelled correctly
 
@@ -84,19 +25,19 @@ $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Ap
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Apikey', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\SpellCheckApi(
+$apiInstance = new Swagger\Client\Api\SpellcheckApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$value = "value_example"; // string | Input sentence
+$value = new \Swagger\Client\Model\CheckSentenceRequest(); // \Swagger\Client\Model\CheckSentenceRequest | Input sentence
 
 try {
-    $result = $apiInstance->spellCheckCheckSentenceJson($value);
+    $result = $apiInstance->spellcheckCheckSentence($value);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SpellCheckApi->spellCheckCheckSentenceJson: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SpellcheckApi->spellcheckCheckSentence: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -105,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **value** | **string**| Input sentence |
+ **value** | [**\Swagger\Client\Model\CheckSentenceRequest**](../Model/CheckSentenceRequest.md)| Input sentence |
 
 ### Return type
 
-[**\Swagger\Client\Model\CheckSentenceJsonResponse**](../Model/CheckSentenceJsonResponse.md)
+[**\Swagger\Client\Model\CheckSentenceResponse**](../Model/CheckSentenceResponse.md)
 
 ### Authorization
 
@@ -122,118 +63,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **spellCheckCheckSentenceString**
-> bool spellCheckCheckSentenceString($value)
-
-Spell check a sentence
-
-Check if a sentence is spelled correctly
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: Apikey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Apikey', 'Bearer');
-
-$apiInstance = new Swagger\Client\Api\SpellCheckApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$value = "value_example"; // string | Input sentence word
-
-try {
-    $result = $apiInstance->spellCheckCheckSentenceString($value);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SpellCheckApi->spellCheckCheckSentenceString: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **string**| Input sentence word |
-
-### Return type
-
-**bool**
-
-### Authorization
-
-[Apikey](../../README.md#Apikey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **spellCheckCorrect**
-> string spellCheckCorrect($value)
-
-Find spelling corrections
-
-Find the spelling corrections for a word
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: Apikey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Apikey', 'Bearer');
-
-$apiInstance = new Swagger\Client\Api\SpellCheckApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$value = "value_example"; // string | Input word
-
-try {
-    $result = $apiInstance->spellCheckCorrect($value);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SpellCheckApi->spellCheckCorrect: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **string**| Input word |
-
-### Return type
-
-**string**
-
-### Authorization
-
-[Apikey](../../README.md#Apikey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **spellCheckCorrectJson**
-> \Swagger\Client\Model\CorrectJsonResponse spellCheckCorrectJson($value)
+# **spellcheckCorrectJson**
+> \Swagger\Client\Model\CheckWordResponse spellcheckCorrectJson($value)
 
 Find spelling corrections
 
@@ -249,19 +80,19 @@ $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Ap
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Apikey', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\SpellCheckApi(
+$apiInstance = new Swagger\Client\Api\SpellcheckApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$value = "value_example"; // string | Input string
+$value = new \Swagger\Client\Model\CheckWordRequest(); // \Swagger\Client\Model\CheckWordRequest | Input string
 
 try {
-    $result = $apiInstance->spellCheckCorrectJson($value);
+    $result = $apiInstance->spellcheckCorrectJson($value);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SpellCheckApi->spellCheckCorrectJson: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SpellcheckApi->spellcheckCorrectJson: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -270,66 +101,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **value** | **string**| Input string |
+ **value** | [**\Swagger\Client\Model\CheckWordRequest**](../Model/CheckWordRequest.md)| Input string |
 
 ### Return type
 
-[**\Swagger\Client\Model\CorrectJsonResponse**](../Model/CorrectJsonResponse.md)
-
-### Authorization
-
-[Apikey](../../README.md#Apikey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **spellCheckPost**
-> bool spellCheckPost($value)
-
-Spell check a word
-
-Check if a word is spelled correctly
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: Apikey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Apikey', 'Bearer');
-
-$apiInstance = new Swagger\Client\Api\SpellCheckApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$value = "value_example"; // string | Input string word
-
-try {
-    $result = $apiInstance->spellCheckPost($value);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SpellCheckApi->spellCheckPost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **string**| Input string word |
-
-### Return type
-
-**bool**
+[**\Swagger\Client\Model\CheckWordResponse**](../Model/CheckWordResponse.md)
 
 ### Authorization
 

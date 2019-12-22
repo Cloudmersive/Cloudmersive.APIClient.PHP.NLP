@@ -4,11 +4,11 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**languageDetectionPost**](LanguageDetectionApi.md#languageDetectionPost) | **POST** /nlp/language/detect | Detect language of text
+[**languageDetectionGetLanguage**](LanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 
 
-# **languageDetectionPost**
-> \Swagger\Client\Model\LanguageDetectionResponse languageDetectionPost($text_to_detect)
+# **languageDetectionGetLanguage**
+> \Swagger\Client\Model\LanguageDetectionResponse languageDetectionGetLanguage($input)
 
 Detect language of text
 
@@ -30,13 +30,13 @@ $apiInstance = new Swagger\Client\Api\LanguageDetectionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$text_to_detect = "text_to_detect_example"; // string | Text to detect language of
+$input = new \Swagger\Client\Model\LanguageDetectionRequest(); // \Swagger\Client\Model\LanguageDetectionRequest | 
 
 try {
-    $result = $apiInstance->languageDetectionPost($text_to_detect);
+    $result = $apiInstance->languageDetectionGetLanguage($input);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LanguageDetectionApi->languageDetectionPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LanguageDetectionApi->languageDetectionGetLanguage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **text_to_detect** | **string**| Text to detect language of |
+ **input** | [**\Swagger\Client\Model\LanguageDetectionRequest**](../Model/LanguageDetectionRequest.md)|  |
 
 ### Return type
 
