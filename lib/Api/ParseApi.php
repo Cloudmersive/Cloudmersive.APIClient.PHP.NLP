@@ -263,7 +263,7 @@ class ParseApi
             );
         }
 
-        $resourcePath = '/nlp/parse/tree';
+        $resourcePath = '/nlp-v2/parse/tree';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
