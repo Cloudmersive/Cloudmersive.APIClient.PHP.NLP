@@ -90,4 +90,24 @@ class LanguageTranslationApiTest extends \PHPUnit_Framework_TestCase
     public function testLanguageTranslationTranslateEngToDeu()
     {
     }
+
+    /**
+     * Test case for languageTranslationTranslateEngToRus
+     *
+     * Translate English to Russian text with Deep Learning AI.
+     *
+     */
+    public function testLanguageTranslationTranslateEngToRus()
+    {
+    }
+
+    /**
+     * Test case for languageTranslationTranslateRusToEng
+     *
+     * Translate Russian to English text with Deep Learning AI.
+     *
+     */
+    public function testLanguageTranslationTranslateRusToEng()
+    {
+    }
 }
