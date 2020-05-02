@@ -4,7 +4,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.2
+- Package version: 2.0.3
 
 
 ## Requirements
@@ -88,6 +88,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ExtractEntitiesApi* | [**extractEntitiesPost**](docs/Api/ExtractEntitiesApi.md#extractentitiespost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/Api/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
+*LanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/Api/LanguageTranslationApi.md#languagetranslationtranslatedeutoeng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
+*LanguageTranslationApi* | [**languageTranslationTranslateEngToDeu**](docs/Api/LanguageTranslationApi.md#languagetranslationtranslateengtodeu) | **POST** /nlp-v2/translate/language/eng/to/deu | Translate English to German text with Deep Learning AI
 *ParseApi* | [**parseParseString**](docs/Api/ParseApi.md#parseparsestring) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *PosTaggerApi* | [**posTaggerTagAdjectives**](docs/Api/PosTaggerApi.md#postaggertagadjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
 *PosTaggerApi* | [**posTaggerTagAdverbs**](docs/Api/PosTaggerApi.md#postaggertagadverbs) | **POST** /nlp-v2/pos/tag/adverbs | Part-of-speech tag a string, filter to adverbs
@@ -95,6 +97,7 @@ Class | Method | HTTP request | Description
 *PosTaggerApi* | [**posTaggerTagPronouns**](docs/Api/PosTaggerApi.md#postaggertagpronouns) | **POST** /nlp-v2/pos/tag/pronouns | Part-of-speech tag a string, filter to pronouns
 *PosTaggerApi* | [**posTaggerTagSentence**](docs/Api/PosTaggerApi.md#postaggertagsentence) | **POST** /nlp-v2/pos/tag/sentence | Part-of-speech tag a string
 *PosTaggerApi* | [**posTaggerTagVerbs**](docs/Api/PosTaggerApi.md#postaggertagverbs) | **POST** /nlp-v2/pos/tag/verbs | Part-of-speech tag a string, filter to verbs
+*RephraseApi* | [**rephraseTranslateDeuToEng**](docs/Api/RephraseApi.md#rephrasetranslatedeutoeng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 *SegmentationApi* | [**segmentationGetSentences**](docs/Api/SegmentationApi.md#segmentationgetsentences) | **POST** /nlp-v2/segmentation/sentences | Extract sentences from string
 *SegmentationApi* | [**segmentationGetWords**](docs/Api/SegmentationApi.md#segmentationgetwords) | **POST** /nlp-v2/segmentation/words | Get words in input string
 *SpellcheckApi* | [**spellcheckCheckSentence**](docs/Api/SpellcheckApi.md#spellcheckchecksentence) | **POST** /nlp-v2/spellcheck/check/sentence | Check if sentence is spelled correctly
@@ -115,12 +118,18 @@ Class | Method | HTTP request | Description
  - [GetWordsResponse](docs/Model/GetWordsResponse.md)
  - [LanguageDetectionRequest](docs/Model/LanguageDetectionRequest.md)
  - [LanguageDetectionResponse](docs/Model/LanguageDetectionResponse.md)
+ - [LanguageTranslationRequest](docs/Model/LanguageTranslationRequest.md)
+ - [LanguageTranslationResponse](docs/Model/LanguageTranslationResponse.md)
  - [ParseRequest](docs/Model/ParseRequest.md)
  - [ParseResponse](docs/Model/ParseResponse.md)
  - [PosRequest](docs/Model/PosRequest.md)
  - [PosResponse](docs/Model/PosResponse.md)
  - [PosSentence](docs/Model/PosSentence.md)
  - [PosTaggedWord](docs/Model/PosTaggedWord.md)
+ - [RephraseRequest](docs/Model/RephraseRequest.md)
+ - [RephraseResponse](docs/Model/RephraseResponse.md)
+ - [RephrasedSentence](docs/Model/RephrasedSentence.md)
+ - [RephrasedSentenceOption](docs/Model/RephrasedSentenceOption.md)
  - [SentenceSegmentationRequest](docs/Model/SentenceSegmentationRequest.md)
  - [SentenceSegmentationResponse](docs/Model/SentenceSegmentationResponse.md)
  - [WordPosition](docs/Model/WordPosition.md)
