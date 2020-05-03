@@ -4,7 +4,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.4
+- Package version: 2.0.5
 
 
 ## Requirements
@@ -62,19 +62,19 @@ $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Ap
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Apikey', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\ExtractEntitiesApi(
+$apiInstance = new Swagger\Client\Api\AnalyticsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$value = new \Swagger\Client\Model\ExtractEntitiesRequest(); // \Swagger\Client\Model\ExtractEntitiesRequest | Input string
+$input = new \Swagger\Client\Model\SentimentAnalysisRequest(); // \Swagger\Client\Model\SentimentAnalysisRequest | Input sentiment analysis request
 
 try {
-    $result = $apiInstance->extractEntitiesPost($value);
+    $result = $apiInstance->analyticsSentiment($input);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ExtractEntitiesApi->extractEntitiesPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AnalyticsApi->analyticsSentiment: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -86,6 +86,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AnalyticsApi* | [**analyticsSentiment**](docs/Api/AnalyticsApi.md#analyticssentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *ExtractEntitiesApi* | [**extractEntitiesPost**](docs/Api/ExtractEntitiesApi.md#extractentitiespost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/Api/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *LanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/Api/LanguageTranslationApi.md#languagetranslationtranslatedeutoeng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
@@ -134,6 +135,8 @@ Class | Method | HTTP request | Description
  - [RephrasedSentenceOption](docs/Model/RephrasedSentenceOption.md)
  - [SentenceSegmentationRequest](docs/Model/SentenceSegmentationRequest.md)
  - [SentenceSegmentationResponse](docs/Model/SentenceSegmentationResponse.md)
+ - [SentimentAnalysisRequest](docs/Model/SentimentAnalysisRequest.md)
+ - [SentimentAnalysisResponse](docs/Model/SentimentAnalysisResponse.md)
  - [WordPosition](docs/Model/WordPosition.md)
 
 
