@@ -1,6 +1,6 @@
 <?php
 /**
- * SentimentAnalysisResponse
+ * ProfanityAnalysisResponse
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * SentimentAnalysisResponse Class Doc Comment
+ * ProfanityAnalysisResponse Class Doc Comment
  *
  * @category Class
- * @description Output of a sentiment analysis operation
+ * @description Output of a profanity analysis operation
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
+class ProfanityAnalysisResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'SentimentAnalysisResponse';
+    protected static $swaggerModelName = 'ProfanityAnalysisResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'successful' => 'bool',
-        'sentiment_classification_result' => 'string',
-        'sentiment_score_result' => 'double',
+        'profanity_score_result' => 'double',
         'sentence_count' => 'int'
     ];
 
@@ -71,8 +70,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'successful' => null,
-        'sentiment_classification_result' => null,
-        'sentiment_score_result' => 'double',
+        'profanity_score_result' => 'double',
         'sentence_count' => 'int32'
     ];
 
@@ -104,8 +102,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'successful' => 'Successful',
-        'sentiment_classification_result' => 'SentimentClassificationResult',
-        'sentiment_score_result' => 'SentimentScoreResult',
+        'profanity_score_result' => 'ProfanityScoreResult',
         'sentence_count' => 'SentenceCount'
     ];
 
@@ -116,8 +113,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'successful' => 'setSuccessful',
-        'sentiment_classification_result' => 'setSentimentClassificationResult',
-        'sentiment_score_result' => 'setSentimentScoreResult',
+        'profanity_score_result' => 'setProfanityScoreResult',
         'sentence_count' => 'setSentenceCount'
     ];
 
@@ -128,8 +124,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'successful' => 'getSuccessful',
-        'sentiment_classification_result' => 'getSentimentClassificationResult',
-        'sentiment_score_result' => 'getSentimentScoreResult',
+        'profanity_score_result' => 'getProfanityScoreResult',
         'sentence_count' => 'getSentenceCount'
     ];
 
@@ -194,8 +189,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['successful'] = isset($data['successful']) ? $data['successful'] : null;
-        $this->container['sentiment_classification_result'] = isset($data['sentiment_classification_result']) ? $data['sentiment_classification_result'] : null;
-        $this->container['sentiment_score_result'] = isset($data['sentiment_score_result']) ? $data['sentiment_score_result'] : null;
+        $this->container['profanity_score_result'] = isset($data['profanity_score_result']) ? $data['profanity_score_result'] : null;
         $this->container['sentence_count'] = isset($data['sentence_count']) ? $data['sentence_count'] : null;
     }
 
@@ -237,7 +231,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
     /**
      * Sets successful
      *
-     * @param bool $successful True if the sentiment analysis operation was successful, false otherwise
+     * @param bool $successful True if the profanity detection operation was successful, false otherwise
      *
      * @return $this
      */
@@ -249,49 +243,25 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets sentiment_classification_result
-     *
-     * @return string
-     */
-    public function getSentimentClassificationResult()
-    {
-        return $this->container['sentiment_classification_result'];
-    }
-
-    /**
-     * Sets sentiment_classification_result
-     *
-     * @param string $sentiment_classification_result Classification of input text into a sentiment classification; possible values are \"Positive\", \"Negative\" or \"Neutral\"
-     *
-     * @return $this
-     */
-    public function setSentimentClassificationResult($sentiment_classification_result)
-    {
-        $this->container['sentiment_classification_result'] = $sentiment_classification_result;
-
-        return $this;
-    }
-
-    /**
-     * Gets sentiment_score_result
+     * Gets profanity_score_result
      *
      * @return double
      */
-    public function getSentimentScoreResult()
+    public function getProfanityScoreResult()
     {
-        return $this->container['sentiment_score_result'];
+        return $this->container['profanity_score_result'];
     }
 
     /**
-     * Sets sentiment_score_result
+     * Sets profanity_score_result
      *
-     * @param double $sentiment_score_result Sentiment classification score between -1.0 and +1.0 where scores less than 0 are negative sentiment, scores greater than 0 are positive sentiment and scores close to 0 are neutral.  The greater the value deviates from 0.0 the stronger the sentiment, with +1.0 and -1.0 being maximum positive and negative sentiment, respectively.
+     * @param double $profanity_score_result Profanity classification score between 0.0 and 1.0 where scores closer to zero have a low probability of being profane or contain obscene language, while scores close to 1.0 have a high probability of being profane or containing obscene language.  Values above 0.8 have a very high probability of being profane.
      *
      * @return $this
      */
-    public function setSentimentScoreResult($sentiment_score_result)
+    public function setProfanityScoreResult($profanity_score_result)
     {
-        $this->container['sentiment_score_result'] = $sentiment_score_result;
+        $this->container['profanity_score_result'] = $profanity_score_result;
 
         return $this;
     }

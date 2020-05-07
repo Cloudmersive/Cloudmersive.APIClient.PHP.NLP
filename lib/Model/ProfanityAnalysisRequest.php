@@ -1,6 +1,6 @@
 <?php
 /**
- * SentimentAnalysisResponse
+ * ProfanityAnalysisRequest
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * SentimentAnalysisResponse Class Doc Comment
+ * ProfanityAnalysisRequest Class Doc Comment
  *
  * @category Class
- * @description Output of a sentiment analysis operation
+ * @description Input to a profanity analysis operation
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
+class ProfanityAnalysisRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'SentimentAnalysisResponse';
+    protected static $swaggerModelName = 'ProfanityAnalysisRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'successful' => 'bool',
-        'sentiment_classification_result' => 'string',
-        'sentiment_score_result' => 'double',
-        'sentence_count' => 'int'
+        'text_to_analyze' => 'string'
     ];
 
     /**
@@ -70,10 +67,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'successful' => null,
-        'sentiment_classification_result' => null,
-        'sentiment_score_result' => 'double',
-        'sentence_count' => 'int32'
+        'text_to_analyze' => null
     ];
 
     /**
@@ -103,10 +97,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'successful' => 'Successful',
-        'sentiment_classification_result' => 'SentimentClassificationResult',
-        'sentiment_score_result' => 'SentimentScoreResult',
-        'sentence_count' => 'SentenceCount'
+        'text_to_analyze' => 'TextToAnalyze'
     ];
 
     /**
@@ -115,10 +106,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'successful' => 'setSuccessful',
-        'sentiment_classification_result' => 'setSentimentClassificationResult',
-        'sentiment_score_result' => 'setSentimentScoreResult',
-        'sentence_count' => 'setSentenceCount'
+        'text_to_analyze' => 'setTextToAnalyze'
     ];
 
     /**
@@ -127,10 +115,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'successful' => 'getSuccessful',
-        'sentiment_classification_result' => 'getSentimentClassificationResult',
-        'sentiment_score_result' => 'getSentimentScoreResult',
-        'sentence_count' => 'getSentenceCount'
+        'text_to_analyze' => 'getTextToAnalyze'
     ];
 
     /**
@@ -193,10 +178,7 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['successful'] = isset($data['successful']) ? $data['successful'] : null;
-        $this->container['sentiment_classification_result'] = isset($data['sentiment_classification_result']) ? $data['sentiment_classification_result'] : null;
-        $this->container['sentiment_score_result'] = isset($data['sentiment_score_result']) ? $data['sentiment_score_result'] : null;
-        $this->container['sentence_count'] = isset($data['sentence_count']) ? $data['sentence_count'] : null;
+        $this->container['text_to_analyze'] = isset($data['text_to_analyze']) ? $data['text_to_analyze'] : null;
     }
 
     /**
@@ -225,97 +207,25 @@ class SentimentAnalysisResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets successful
-     *
-     * @return bool
-     */
-    public function getSuccessful()
-    {
-        return $this->container['successful'];
-    }
-
-    /**
-     * Sets successful
-     *
-     * @param bool $successful True if the sentiment analysis operation was successful, false otherwise
-     *
-     * @return $this
-     */
-    public function setSuccessful($successful)
-    {
-        $this->container['successful'] = $successful;
-
-        return $this;
-    }
-
-    /**
-     * Gets sentiment_classification_result
+     * Gets text_to_analyze
      *
      * @return string
      */
-    public function getSentimentClassificationResult()
+    public function getTextToAnalyze()
     {
-        return $this->container['sentiment_classification_result'];
+        return $this->container['text_to_analyze'];
     }
 
     /**
-     * Sets sentiment_classification_result
+     * Sets text_to_analyze
      *
-     * @param string $sentiment_classification_result Classification of input text into a sentiment classification; possible values are \"Positive\", \"Negative\" or \"Neutral\"
+     * @param string $text_to_analyze Text to analyze
      *
      * @return $this
      */
-    public function setSentimentClassificationResult($sentiment_classification_result)
+    public function setTextToAnalyze($text_to_analyze)
     {
-        $this->container['sentiment_classification_result'] = $sentiment_classification_result;
-
-        return $this;
-    }
-
-    /**
-     * Gets sentiment_score_result
-     *
-     * @return double
-     */
-    public function getSentimentScoreResult()
-    {
-        return $this->container['sentiment_score_result'];
-    }
-
-    /**
-     * Sets sentiment_score_result
-     *
-     * @param double $sentiment_score_result Sentiment classification score between -1.0 and +1.0 where scores less than 0 are negative sentiment, scores greater than 0 are positive sentiment and scores close to 0 are neutral.  The greater the value deviates from 0.0 the stronger the sentiment, with +1.0 and -1.0 being maximum positive and negative sentiment, respectively.
-     *
-     * @return $this
-     */
-    public function setSentimentScoreResult($sentiment_score_result)
-    {
-        $this->container['sentiment_score_result'] = $sentiment_score_result;
-
-        return $this;
-    }
-
-    /**
-     * Gets sentence_count
-     *
-     * @return int
-     */
-    public function getSentenceCount()
-    {
-        return $this->container['sentence_count'];
-    }
-
-    /**
-     * Sets sentence_count
-     *
-     * @param int $sentence_count Number of sentences in input text
-     *
-     * @return $this
-     */
-    public function setSentenceCount($sentence_count)
-    {
-        $this->container['sentence_count'] = $sentence_count;
+        $this->container['text_to_analyze'] = $text_to_analyze;
 
         return $this;
     }

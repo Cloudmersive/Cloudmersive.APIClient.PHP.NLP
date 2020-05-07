@@ -4,7 +4,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.5
+- Package version: 2.0.6
 
 
 ## Requirements
@@ -68,13 +68,13 @@ $apiInstance = new Swagger\Client\Api\AnalyticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$input = new \Swagger\Client\Model\SentimentAnalysisRequest(); // \Swagger\Client\Model\SentimentAnalysisRequest | Input sentiment analysis request
+$input = new \Swagger\Client\Model\ProfanityAnalysisRequest(); // \Swagger\Client\Model\ProfanityAnalysisRequest | Input profanity analysis request
 
 try {
-    $result = $apiInstance->analyticsSentiment($input);
+    $result = $apiInstance->analyticsProfanity($input);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AnalyticsApi->analyticsSentiment: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AnalyticsApi->analyticsProfanity: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -86,6 +86,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AnalyticsApi* | [**analyticsProfanity**](docs/Api/AnalyticsApi.md#analyticsprofanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *AnalyticsApi* | [**analyticsSentiment**](docs/Api/AnalyticsApi.md#analyticssentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *ExtractEntitiesApi* | [**extractEntitiesPost**](docs/Api/ExtractEntitiesApi.md#extractentitiespost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/Api/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
@@ -129,6 +130,8 @@ Class | Method | HTTP request | Description
  - [PosResponse](docs/Model/PosResponse.md)
  - [PosSentence](docs/Model/PosSentence.md)
  - [PosTaggedWord](docs/Model/PosTaggedWord.md)
+ - [ProfanityAnalysisRequest](docs/Model/ProfanityAnalysisRequest.md)
+ - [ProfanityAnalysisResponse](docs/Model/ProfanityAnalysisResponse.md)
  - [RephraseRequest](docs/Model/RephraseRequest.md)
  - [RephraseResponse](docs/Model/RephraseResponse.md)
  - [RephrasedSentence](docs/Model/RephrasedSentence.md)
