@@ -83,7 +83,7 @@ class RephraseApi
     }
 
     /**
-     * Operation rephraseTranslateDeuToEng
+     * Operation rephraseEnglishRephraseSentenceBySentence
      *
      * Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
      *
@@ -93,14 +93,14 @@ class RephraseApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\RephraseResponse
      */
-    public function rephraseTranslateDeuToEng($input)
+    public function rephraseEnglishRephraseSentenceBySentence($input)
     {
-        list($response) = $this->rephraseTranslateDeuToEngWithHttpInfo($input);
+        list($response) = $this->rephraseEnglishRephraseSentenceBySentenceWithHttpInfo($input);
         return $response;
     }
 
     /**
-     * Operation rephraseTranslateDeuToEngWithHttpInfo
+     * Operation rephraseEnglishRephraseSentenceBySentenceWithHttpInfo
      *
      * Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
      *
@@ -110,10 +110,10 @@ class RephraseApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\RephraseResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function rephraseTranslateDeuToEngWithHttpInfo($input)
+    public function rephraseEnglishRephraseSentenceBySentenceWithHttpInfo($input)
     {
         $returnType = '\Swagger\Client\Model\RephraseResponse';
-        $request = $this->rephraseTranslateDeuToEngRequest($input);
+        $request = $this->rephraseEnglishRephraseSentenceBySentenceRequest($input);
 
         try {
             $options = $this->createHttpClientOption();
@@ -175,7 +175,7 @@ class RephraseApi
     }
 
     /**
-     * Operation rephraseTranslateDeuToEngAsync
+     * Operation rephraseEnglishRephraseSentenceBySentenceAsync
      *
      * Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
      *
@@ -184,9 +184,9 @@ class RephraseApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rephraseTranslateDeuToEngAsync($input)
+    public function rephraseEnglishRephraseSentenceBySentenceAsync($input)
     {
-        return $this->rephraseTranslateDeuToEngAsyncWithHttpInfo($input)
+        return $this->rephraseEnglishRephraseSentenceBySentenceAsyncWithHttpInfo($input)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -195,7 +195,7 @@ class RephraseApi
     }
 
     /**
-     * Operation rephraseTranslateDeuToEngAsyncWithHttpInfo
+     * Operation rephraseEnglishRephraseSentenceBySentenceAsyncWithHttpInfo
      *
      * Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
      *
@@ -204,10 +204,10 @@ class RephraseApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rephraseTranslateDeuToEngAsyncWithHttpInfo($input)
+    public function rephraseEnglishRephraseSentenceBySentenceAsyncWithHttpInfo($input)
     {
         $returnType = '\Swagger\Client\Model\RephraseResponse';
-        $request = $this->rephraseTranslateDeuToEngRequest($input);
+        $request = $this->rephraseEnglishRephraseSentenceBySentenceRequest($input);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -247,19 +247,19 @@ class RephraseApi
     }
 
     /**
-     * Create request for operation 'rephraseTranslateDeuToEng'
+     * Create request for operation 'rephraseEnglishRephraseSentenceBySentence'
      *
      * @param  \Swagger\Client\Model\RephraseRequest $input Input rephrase request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function rephraseTranslateDeuToEngRequest($input)
+    protected function rephraseEnglishRephraseSentenceBySentenceRequest($input)
     {
         // verify the required parameter 'input' is set
         if ($input === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $input when calling rephraseTranslateDeuToEng'
+                'Missing the required parameter $input when calling rephraseEnglishRephraseSentenceBySentence'
             );
         }
 

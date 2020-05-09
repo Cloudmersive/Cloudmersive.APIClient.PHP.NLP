@@ -4,7 +4,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.6
+- Package version: 2.0.7
 
 
 ## Requirements
@@ -88,6 +88,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AnalyticsApi* | [**analyticsProfanity**](docs/Api/AnalyticsApi.md#analyticsprofanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *AnalyticsApi* | [**analyticsSentiment**](docs/Api/AnalyticsApi.md#analyticssentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+*AnalyticsApi* | [**analyticsSubjectivity**](docs/Api/AnalyticsApi.md#analyticssubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 *ExtractEntitiesApi* | [**extractEntitiesPost**](docs/Api/ExtractEntitiesApi.md#extractentitiespost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/Api/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *LanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/Api/LanguageTranslationApi.md#languagetranslationtranslatedeutoeng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
@@ -101,7 +102,7 @@ Class | Method | HTTP request | Description
 *PosTaggerApi* | [**posTaggerTagPronouns**](docs/Api/PosTaggerApi.md#postaggertagpronouns) | **POST** /nlp-v2/pos/tag/pronouns | Part-of-speech tag a string, filter to pronouns
 *PosTaggerApi* | [**posTaggerTagSentence**](docs/Api/PosTaggerApi.md#postaggertagsentence) | **POST** /nlp-v2/pos/tag/sentence | Part-of-speech tag a string
 *PosTaggerApi* | [**posTaggerTagVerbs**](docs/Api/PosTaggerApi.md#postaggertagverbs) | **POST** /nlp-v2/pos/tag/verbs | Part-of-speech tag a string, filter to verbs
-*RephraseApi* | [**rephraseTranslateDeuToEng**](docs/Api/RephraseApi.md#rephrasetranslatedeutoeng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
+*RephraseApi* | [**rephraseEnglishRephraseSentenceBySentence**](docs/Api/RephraseApi.md#rephraseenglishrephrasesentencebysentence) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 *SegmentationApi* | [**segmentationGetSentences**](docs/Api/SegmentationApi.md#segmentationgetsentences) | **POST** /nlp-v2/segmentation/sentences | Extract sentences from string
 *SegmentationApi* | [**segmentationGetWords**](docs/Api/SegmentationApi.md#segmentationgetwords) | **POST** /nlp-v2/segmentation/words | Get words in input string
 *SpellcheckApi* | [**spellcheckCheckSentence**](docs/Api/SpellcheckApi.md#spellcheckchecksentence) | **POST** /nlp-v2/spellcheck/check/sentence | Check if sentence is spelled correctly
@@ -140,6 +141,8 @@ Class | Method | HTTP request | Description
  - [SentenceSegmentationResponse](docs/Model/SentenceSegmentationResponse.md)
  - [SentimentAnalysisRequest](docs/Model/SentimentAnalysisRequest.md)
  - [SentimentAnalysisResponse](docs/Model/SentimentAnalysisResponse.md)
+ - [SubjectivityAnalysisRequest](docs/Model/SubjectivityAnalysisRequest.md)
+ - [SubjectivityAnalysisResponse](docs/Model/SubjectivityAnalysisResponse.md)
  - [WordPosition](docs/Model/WordPosition.md)
 
 

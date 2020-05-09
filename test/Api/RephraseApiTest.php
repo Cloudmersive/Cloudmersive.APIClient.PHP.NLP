@@ -72,12 +72,12 @@ class RephraseApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for rephraseTranslateDeuToEng
+     * Test case for rephraseEnglishRephraseSentenceBySentence
      *
      * Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI.
      *
      */
-    public function testRephraseTranslateDeuToEng()
+    public function testRephraseEnglishRephraseSentenceBySentence()
     {
     }
 }

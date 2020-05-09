@@ -4,11 +4,11 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**rephraseTranslateDeuToEng**](RephraseApi.md#rephraseTranslateDeuToEng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
+[**rephraseEnglishRephraseSentenceBySentence**](RephraseApi.md#rephraseEnglishRephraseSentenceBySentence) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 
 
-# **rephraseTranslateDeuToEng**
-> \Swagger\Client\Model\RephraseResponse rephraseTranslateDeuToEng($input)
+# **rephraseEnglishRephraseSentenceBySentence**
+> \Swagger\Client\Model\RephraseResponse rephraseEnglishRephraseSentenceBySentence($input)
 
 Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 
@@ -33,10 +33,10 @@ $apiInstance = new Swagger\Client\Api\RephraseApi(
 $input = new \Swagger\Client\Model\RephraseRequest(); // \Swagger\Client\Model\RephraseRequest | Input rephrase request
 
 try {
-    $result = $apiInstance->rephraseTranslateDeuToEng($input);
+    $result = $apiInstance->rephraseEnglishRephraseSentenceBySentence($input);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RephraseApi->rephraseTranslateDeuToEng: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling RephraseApi->rephraseEnglishRephraseSentenceBySentence: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
