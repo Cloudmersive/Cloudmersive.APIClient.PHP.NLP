@@ -4,7 +4,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.7
+- Package version: 2.0.8
 
 
 ## Requirements
@@ -88,6 +88,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AnalyticsApi* | [**analyticsProfanity**](docs/Api/AnalyticsApi.md#analyticsprofanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *AnalyticsApi* | [**analyticsSentiment**](docs/Api/AnalyticsApi.md#analyticssentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+*AnalyticsApi* | [**analyticsSimilarity**](docs/Api/AnalyticsApi.md#analyticssimilarity) | **POST** /nlp-v2/analytics/similarity | Perform Semantic Similarity Comparison of Two Strings
 *AnalyticsApi* | [**analyticsSubjectivity**](docs/Api/AnalyticsApi.md#analyticssubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 *ExtractEntitiesApi* | [**extractEntitiesPost**](docs/Api/ExtractEntitiesApi.md#extractentitiespost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/Api/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
@@ -141,6 +142,8 @@ Class | Method | HTTP request | Description
  - [SentenceSegmentationResponse](docs/Model/SentenceSegmentationResponse.md)
  - [SentimentAnalysisRequest](docs/Model/SentimentAnalysisRequest.md)
  - [SentimentAnalysisResponse](docs/Model/SentimentAnalysisResponse.md)
+ - [SimilarityAnalysisRequest](docs/Model/SimilarityAnalysisRequest.md)
+ - [SimilarityAnalysisResponse](docs/Model/SimilarityAnalysisResponse.md)
  - [SubjectivityAnalysisRequest](docs/Model/SubjectivityAnalysisRequest.md)
  - [SubjectivityAnalysisResponse](docs/Model/SubjectivityAnalysisResponse.md)
  - [WordPosition](docs/Model/WordPosition.md)
