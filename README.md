@@ -4,7 +4,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.8
+- Package version: 2.0.9
 
 
 ## Requirements
@@ -68,13 +68,13 @@ $apiInstance = new Swagger\Client\Api\AnalyticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$input = new \Swagger\Client\Model\ProfanityAnalysisRequest(); // \Swagger\Client\Model\ProfanityAnalysisRequest | Input profanity analysis request
+$input = new \Swagger\Client\Model\HateSpeechAnalysisRequest(); // \Swagger\Client\Model\HateSpeechAnalysisRequest | Input hate speech analysis request
 
 try {
-    $result = $apiInstance->analyticsProfanity($input);
+    $result = $apiInstance->analyticsHateSpeech($input);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AnalyticsApi->analyticsProfanity: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AnalyticsApi->analyticsHateSpeech: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -86,6 +86,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AnalyticsApi* | [**analyticsHateSpeech**](docs/Api/AnalyticsApi.md#analyticshatespeech) | **POST** /nlp-v2/analytics/hate-speech | Perform Hate Speech Analysis and Detection on Text
 *AnalyticsApi* | [**analyticsProfanity**](docs/Api/AnalyticsApi.md#analyticsprofanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *AnalyticsApi* | [**analyticsSentiment**](docs/Api/AnalyticsApi.md#analyticssentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *AnalyticsApi* | [**analyticsSimilarity**](docs/Api/AnalyticsApi.md#analyticssimilarity) | **POST** /nlp-v2/analytics/similarity | Perform Semantic Similarity Comparison of Two Strings
@@ -122,6 +123,8 @@ Class | Method | HTTP request | Description
  - [ExtractEntitiesResponse](docs/Model/ExtractEntitiesResponse.md)
  - [GetWordsRequest](docs/Model/GetWordsRequest.md)
  - [GetWordsResponse](docs/Model/GetWordsResponse.md)
+ - [HateSpeechAnalysisRequest](docs/Model/HateSpeechAnalysisRequest.md)
+ - [HateSpeechAnalysisResponse](docs/Model/HateSpeechAnalysisResponse.md)
  - [LanguageDetectionRequest](docs/Model/LanguageDetectionRequest.md)
  - [LanguageDetectionResponse](docs/Model/LanguageDetectionResponse.md)
  - [LanguageTranslationRequest](docs/Model/LanguageTranslationRequest.md)

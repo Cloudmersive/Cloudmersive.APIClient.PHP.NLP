@@ -72,6 +72,16 @@ class AnalyticsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for analyticsHateSpeech
+     *
+     * Perform Hate Speech Analysis and Detection on Text.
+     *
+     */
+    public function testAnalyticsHateSpeech()
+    {
+    }
+
+    /**
      * Test case for analyticsProfanity
      *
      * Perform Profanity and Obscene Language Analysis and Detection on Text.
