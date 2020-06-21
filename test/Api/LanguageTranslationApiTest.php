@@ -92,12 +92,32 @@ class LanguageTranslationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for languageTranslationTranslateEngToFra
+     *
+     * Translate English to French text with Deep Learning AI.
+     *
+     */
+    public function testLanguageTranslationTranslateEngToFra()
+    {
+    }
+
+    /**
      * Test case for languageTranslationTranslateEngToRus
      *
      * Translate English to Russian text with Deep Learning AI.
      *
      */
     public function testLanguageTranslationTranslateEngToRus()
+    {
+    }
+
+    /**
+     * Test case for languageTranslationTranslateFraToEng
+     *
+     * Translate French to English text with Deep Learning AI.
+     *
+     */
+    public function testLanguageTranslationTranslateFraToEng()
     {
     }
 

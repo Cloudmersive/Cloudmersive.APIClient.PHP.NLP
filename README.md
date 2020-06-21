@@ -4,7 +4,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.9
+- Package version: 2.1.0
 
 
 ## Requirements
@@ -95,7 +95,9 @@ Class | Method | HTTP request | Description
 *LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/Api/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *LanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/Api/LanguageTranslationApi.md#languagetranslationtranslatedeutoeng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
 *LanguageTranslationApi* | [**languageTranslationTranslateEngToDeu**](docs/Api/LanguageTranslationApi.md#languagetranslationtranslateengtodeu) | **POST** /nlp-v2/translate/language/eng/to/deu | Translate English to German text with Deep Learning AI
+*LanguageTranslationApi* | [**languageTranslationTranslateEngToFra**](docs/Api/LanguageTranslationApi.md#languagetranslationtranslateengtofra) | **POST** /nlp-v2/translate/language/eng/to/fra | Translate English to French text with Deep Learning AI
 *LanguageTranslationApi* | [**languageTranslationTranslateEngToRus**](docs/Api/LanguageTranslationApi.md#languagetranslationtranslateengtorus) | **POST** /nlp-v2/translate/language/eng/to/rus | Translate English to Russian text with Deep Learning AI
+*LanguageTranslationApi* | [**languageTranslationTranslateFraToEng**](docs/Api/LanguageTranslationApi.md#languagetranslationtranslatefratoeng) | **POST** /nlp-v2/translate/language/fra/to/eng | Translate French to English text with Deep Learning AI
 *LanguageTranslationApi* | [**languageTranslationTranslateRusToEng**](docs/Api/LanguageTranslationApi.md#languagetranslationtranslaterustoeng) | **POST** /nlp-v2/translate/language/rus/to/eng | Translate Russian to English text with Deep Learning AI
 *ParseApi* | [**parseParseString**](docs/Api/ParseApi.md#parseparsestring) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *PosTaggerApi* | [**posTaggerTagAdjectives**](docs/Api/PosTaggerApi.md#postaggertagadjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
